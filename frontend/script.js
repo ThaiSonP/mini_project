@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded",()=>{
   const blankDiv2 = document.querySelector(".blankDiv2")
   const blankDiv3 = document.querySelector(".blankDiv3")
   const blankDiv4 = document.querySelector(".blankDiv4")
+  const removeBotton = document.querySelector(".remove")
   let userID;
   let quote;
   let picture;
@@ -106,17 +107,41 @@ document.addEventListener("DOMContentLoaded",()=>{
       const pictureArray = res['data']['pictures']
 
       while(blankDiv4.firstChild){
-        blankDiv3.removeChild(blankDiv3.firstChild)
+        blankDiv4.removeChild(blankDiv4.firstChild)
       }
 
       pictureArray.forEach(el=>{
         let newImg = document.createElement("img");
         newImg.src = el['url'];
-        blankDiv3.appendChild(newImg)
+        blankDiv4.appendChild(newImg)
       })
 
     })
 
+  })
+
+  removeBotton.addEventListener("click",()=>{
+
+    //remove photos:
+    while(blankDiv4.firstChild){
+      blankDiv4.removeChild(blankDiv4.firstChild)
+    }
+
+    //remove single User Mode:
+    while(blankDiv2.firstChild){
+      blankDiv2.removeChild(blankDiv2.firstChild)
+    }
+    while(blankDiv3.firstChild){
+    blankDiv3.removeChild(blankDiv3.firstChild)
+    }
+    // clear find user
+    while(blankDiv1.firstChild){
+      blankDiv1.removeChild(blankDiv1.firstChild)
+    }
+    //remove list:
+    while(blankList.firstChild){
+      blankList.removeChild(blankList.firstChild)
+    }
   })
 
 })
