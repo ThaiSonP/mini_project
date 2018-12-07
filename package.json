@@ -1,0 +1,23 @@
+{
+  "name": "mini_project",
+  "version": "1.0.0",
+  "description": "Your task (should you choose to accept it) is as follows: Utilizing the Facebook-like backend you created in the previous assignment, create a frontend HTML file to render the data.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThaiSonP/mini_project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThaiSonP/mini_project/issues"
+  },
+  "homepage": "https://github.com/ThaiSonP/mini_project#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "save": "^2.3.3"
+  }
+}
